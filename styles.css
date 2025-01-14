@@ -1,0 +1,141 @@
+/* Estilo general */
+* {
+    margin: 0;
+}
+
+header {
+    background-color: #000000;
+    color: #008F11;
+    text-align: left;
+}
+
+/* Importar la fuente Technology */
+@font-face {
+    font-family: 'Technology';
+    src: url('./fonts/Technology-Regular.woff2') format('woff2'),
+        url('./fonts/Technology-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Technology';
+    src: url('./fonts/Technology-Italic.woff2') format('woff2'),
+        url('./fonts/Technology-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Aplicar la fuente al proyecto */
+body {
+    font-family: 'Technology', sans-serif;
+    background-color: #000000;
+    color: #00FF41;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header h1 {
+    font-family: 'Technology', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    color: #00FF41;
+    margin-bottom: 20px;
+    letter-spacing: 0.2em;
+    /* Espaciado entre letras */
+}
+
+main {
+    flex: 1;
+    /* Ocupa todo el espacio disponible */
+}
+
+p,
+ul {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+/* Estilo del footer */
+footer {
+    font-family: 'Technology', sans-serif;
+    text-align: center;
+    margin-top: auto;
+    color: #adff00;
+    padding: 10px 0;
+    background-color: #000000;
+
+    /* Sin movimiento por defecto */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Animación para el hover del footer */
+footer:hover {
+    animation: moveMarginLeftRight 2s infinite;
+    /* Ejecuta la animación */
+    color: #ffffff;
+    /* Cambia el color del texto */
+}
+
+/* Keyframes para mover el footer usando margin-left */
+@keyframes moveMarginLeftRight {
+    0% {
+        margin-left: 0;
+        /* Posición inicial */
+    }
+
+    25% {
+        margin-left: 25%;
+        /* Se mueve un cuarto del ancho */
+    }
+
+    50% {
+        margin-left: 50%;
+        /* Mover a la mitad de la pantalla */
+    }
+
+    75% {
+        margin-left: 25%;
+        /* Regresa hacia un cuarto del ancho */
+    }
+
+    100% {
+        margin-left: 0;
+        /* Vuelve al punto de inicio */
+    }
+}
+
+/* Estilo para "Lumos" */
+#lumos {
+    color: #000; /* Letras negras inicialmente */
+    font-size: 4rem;
+    letter-spacing: 0.2em; /* Espaciado entre letras */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición suave */
+    font-family: 'Creepster', sans-serif;
+    letter-spacing: 0.3em;
+}
+
+#lumos:hover {
+    /* Color degradado suave */
+    background: linear-gradient(90deg, #ffffff, #ffcc00, #ffffff);
+    -webkit-background-clip: text; /* Aplica el degradado al texto */
+    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el degradado */
+
+    /* Resplandor adicional */
+    text-shadow: 
+        0 0 10px #ffffff, 
+        0 0 20px #ffffff, 
+        0 0 30px #ffffff, 
+        0 0 40px #ffcc00, /* Resplandor dorado */
+        0 0 50px #ffcc00;
+    transition: text-shadow 0.s ease, background 0.10s ease;
+}
